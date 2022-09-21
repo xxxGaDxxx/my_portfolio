@@ -1,0 +1,11 @@
+.container {
+    display: flex;
+    max-width: 915px;
+}
+
+.photo_link {
+    display: flex;
+    flex-wrap: wrap;
+    align-content: space-between;
+    justify-content: space-between;
+}
