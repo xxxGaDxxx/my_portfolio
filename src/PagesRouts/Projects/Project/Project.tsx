@@ -28,9 +28,9 @@ export const Project = (props: ProjectPropsType) => {
                 <div className={style.bloc_description}>
                     <h3 className={style.title_project}>{props.project.title}</h3>
                     <ul className={style.list}>
-                        <li><SvgIcon icon={'start_data'}/><span>Start Date:</span>{props.project.date_start}</li>
-                        <li><SvgIcon icon={'end_data'}/><span>End Date:</span>{props.project.date_end}</li>
-                        <li><SvgIcon icon={'technologies'}/><span>Used Technologies:</span>{props.project.technologies}
+                        <li><span><SvgIcon icon={'startData'}/>Start Date:</span>{props.project.date_start}</li>
+                        <li><span><SvgIcon icon={'endData'}/>End Date:</span>{props.project.date_end}</li>
+                        <li><span><SvgIcon icon={'technologies'}/>Used Technologies:</span>{props.project.technologies}
                         </li>
                     </ul>
                     <hr/>

@@ -4,8 +4,7 @@
 }
 
 .photo_link {
-    display: flex;
-    flex-wrap: wrap;
-    align-content: space-between;
-    justify-content: space-between;
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    gap: 20px;
 }

@@ -1,0 +1,49 @@
+.card_info{
+    border: 1px solid #7B7B7B;
+    margin-bottom: 50px;
+}
+.card_list {
+    list-style: none;
+}
+
+.card_item {
+    overflow: initial;
+}
+
+.title_card_info{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #121212;
+
+    height: 70px;
+    border-bottom:1px solid #7B7B7B;
+}
+
+.description_exp_edu{
+    margin: 20px 20px;
+}
+.description_exp_edu{
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 22px;
+    letter-spacing: 0.02em;
+    text-transform: uppercase;
+
+    color: #FFFFFF;
+}
+.data_info{
+    display: flex;
+    align-items: center;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 160%;
+    color: #EEEEEE;
+}
+.description_info{
+    font-size: 16px;
+    line-height: 160%;
+    letter-spacing: 0.02em;
+    color: #EEEEEE;
+
+}

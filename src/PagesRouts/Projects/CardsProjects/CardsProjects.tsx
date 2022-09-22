@@ -16,10 +16,6 @@ export const CardsProjects = (props: CardsProjects) => {
         navigate(`project/${props.projects.title}`)
     }
 
-    return (
-        <div>
-            {/*<button onClick={onClick}>{props.projects.title}</button>*/}
-            <img className={style.img} src={props.photo} alt="foto" onClick={onClick}/>
-        </div>
-    );
+    return <img className={style.img} src={props.photo} alt="photo" onClick={onClick}/>
+
 };

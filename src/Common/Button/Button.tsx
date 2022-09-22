@@ -1,5 +1,6 @@
 import React from 'react';
 import {SvgIcon} from '../svg_icon/SvgIcon';
+import style from './Button.module.css'
 
 type ButtonType = {
     title: string
@@ -15,9 +16,8 @@ export const Button = (props: ButtonType) => {
     }
 
     return (
-        <div>
-            <SvgIcon icon={props.icon}/>
-            <button onClick={onClick}>{props.title}</button>
-        </div>
+
+            <button className={style.btn} onClick={onClick}>{props.title} <SvgIcon icon={props.icon}/></button>
+
     );
 };

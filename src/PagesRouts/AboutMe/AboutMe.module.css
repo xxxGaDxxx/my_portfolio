@@ -3,3 +3,73 @@
 .container{
     /*max-width: 915px;*/
 }
+
+.title_person_info{
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+.title_person_info h3{
+    margin-left: 10px;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 22px;
+    text-align: center;
+    letter-spacing: 0.02em;
+    text-transform: uppercase;
+    color: #FFFFFF;
+}
+.description_person{
+    font-size: 16px;
+    line-height: 160%;
+    letter-spacing: 0.02em;
+    color: #7B7B7B;
+margin-bottom: 20px;
+}
+.list_person{
+    display: flex;
+    justify-content: flex-start;
+    margin-bottom: 25px;
+}
+.list_person li{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    list-style-type: none;
+    color: #7B7B7B;
+    margin-bottom: 0.7em;
+    margin-right: 50px;
+}
+.list_person li span{
+    color: #FFFFFF;
+    margin-right: 5px;
+
+}
+.btn_download{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    margin-bottom: 25px;
+    background-color: #C4E300;
+    border: none;
+    height: 40px;
+    width: 250px;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 20px;
+    text-align: center;
+    letter-spacing: 0.02em;
+    text-transform: uppercase;
+    color: #121212;
+
+}
+.btn_card{
+    display: flex;
+    justify-content: space-between;
+
+}
+.btn_card button{
+height: 35px;
+    width: 150px;
+}

@@ -26,7 +26,11 @@ export const TitleH2 = ({title, setIsOpen, icon}: TitleH2Type) => {
                 <button onClick={onClickHandler}>x</button>
             </div>
             <h2 className={style.title}>{title}</h2>
-            <span className={style.icon}><SvgIcon icon={icon}/></span>
+            <div className={style.line_icon}>
+                <span className={style.line}/>
+                <span className={style.icon}><SvgIcon icon={icon}/></span>
+                <span  className={style.line}/>
+            </div>
         </div>
     );
 };

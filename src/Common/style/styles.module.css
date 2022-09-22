@@ -1,6 +1,7 @@
 .scroll {
     overflow: auto;
 }
+
 /*бг для всех странииц*/
 .background {
     background-color: #262626;
@@ -8,6 +9,7 @@
     margin-right: 24px;
     margin-top: 24px;
 }
+
 /* бг для главтой странице под текст */
 .background_black {
     background-color: #121212;
@@ -23,41 +25,50 @@
 }
 
 
-
 /*расположение  на глайной странице квадратов*/
 .square {
-    width: 63.5vh;
-    height: 45vh;
-    border: 1px solid red;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: calc(50% - 10px);
+    height: calc(50% - 10px);
+    /*border: 1px solid red;*/
 
     font-weight: 700;
     font-size: 40px;
     line-height: 40vh;
     letter-spacing: 0.02em;
     text-transform: uppercase;
-    text-align: center;
+
 }
 
 
-.color_dry{
+.color_dry {
     background-color: #262626;
+    text-decoration: none;
+    color: #C4E300;
 }
-.color_dry button{
+
+.color_dry button {
     color: #C4E300;
     width: 100%;
     height: 100%;
 }
+
 .container {
     padding: 0 100px;
     margin: 0 auto;
     height: 100%;
     border: 1px solid red;
 }
+
 /* контент */
-.container_info{
+.container_info {
     margin: 10px 100px 50px 100px;
 }
-.h3{
+
+.h3 {
     font-weight: 700;
     font-size: 18px;
     /*text-align: center;*/

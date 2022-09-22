@@ -25,6 +25,7 @@ export type DescriptionTypeProps = {
     title: string
     date: string
     description: string
+    icon: string
 }
 export type DescriptionType = {
     [key: string]: SkillsType[] | DescriptionTypeProps[]
@@ -51,52 +52,12 @@ export const AboutMe = ({isOpen, setIsOpen}: AboutMeType) => {
 
 
     let [btnTitle] = useState<BtnTitleType[]>([
-        {id: 'Experience', title: 'Experience', icon:'experience'},
-        {id: 'Education', title: 'Education', icon:'education'},
-        {id: 'Skills', title: 'Skills', icon:'skills'}
+        {id: 'Skills', title: 'Skills', icon: 'skills'},
+        {id: 'Education', title: 'Education', icon: 'education'},
+        {id: 'Experience', title: 'Experience', icon: 'experience'},
     ])
 
     let [description] = useState<DescriptionType>({
-        ['Experience']: [
-            {
-                id: '1.1',
-                title: 'WEB DESIGNER - ENVATO',
-                date: '2015 - 2018',
-                description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.  pretium orci sit amet mi ullamcorper'
-            },
-            {
-                id: '1.2',
-                title: 'WEB DEVELOPER - GOOGLE',
-                date: '2011 - 2015',
-                description: 'Lorem ipsum dolor sit amet, consectetur  elit. Phasellus pretium orci sit amet mi ullamcorper'
-            },
-            {
-                id: '1.3',
-                title: 'COMMUNITY MANAGER - ADOBE',
-                date: '2007 - 2011',
-                description: 'Lorem ipsum dolor sit amet, ciscing elit. Phasellus pretium orci sit amet mi ullamcorper'
-            },
-        ],
-        ['Education']: [
-            {
-                id: '2.1',
-                title: 'INCUBATOR',
-                date: '2015 - 2018',
-                description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus pretium orci sit amet mi ullamcorper'
-            },
-            {
-                id: '2.2',
-                title: 'qwe',
-                date: '2011 - 2015',
-                description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus met mi ullamcorper'
-            },
-            {
-                id: '2.3',
-                title: 'aaasdasd ',
-                date: '2007 - 2011',
-                description: 'Lorem ipsum dolor sit amet, consectetur ium orci sit amet mi ullamcorper'
-            },
-        ],
         ['Skills']: [
             {id: '10', title: 'Ts', icons: 'icon'},
             {id: '11', title: 'React', icons: 'icon'},
@@ -106,6 +67,54 @@ export const AboutMe = ({isOpen, setIsOpen}: AboutMeType) => {
             {id: '15', title: 'Formik', icons: 'icon'},
 
         ],
+        ['Education']: [
+            {
+                id: '2.1',
+                title: 'INCUBATOR',
+                date: '2015 - 2018',
+                description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus pretium orci sit amet mi ullamcorper',
+                icon: 'startData'
+            },
+            {
+                id: '2.2',
+                title: 'qwe',
+                date: '2011 - 2015',
+                description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus met mi ullamcorper',
+                icon: 'startData'
+            },
+            {
+                id: '2.3',
+                title: 'aaasdasd ',
+                date: '2007 - 2011',
+                description: 'Lorem ipsum dolor sit amet, consectetur ium orci sit amet mi ullamcorper',
+                icon: 'startData'
+            },
+        ],
+        ['Experience']: [
+            {
+                id: '1.1',
+                title: 'WEB DESIGNER - ENVATO',
+                date: '2015 - 2018',
+                description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.  pretium orci sit amet mi ullamcorper',
+                icon: 'startData'
+            },
+            {
+                id: '1.2',
+                title: 'WEB DEVELOPER - GOOGLE',
+                date: '2011 - 2015',
+                description: 'Lorem ipsum dolor sit amet, consectetur  elit. Phasellus pretium orci sit amet mi ullamcorper',
+                icon: 'startData'
+            },
+            {
+                id: '1.3',
+                title: 'COMMUNITY MANAGER - ADOBE',
+                date: '2007 - 2011',
+                description: 'Lorem ipsum dolor sit amet, ciscing elit. Phasellus pretium orci sit amet mi ullamcorper',
+                icon: 'startData'
+            },
+        ],
+
+
     });
 
 
@@ -125,49 +134,52 @@ export const AboutMe = ({isOpen, setIsOpen}: AboutMeType) => {
     }
 
 
-    let [btnOn, setBtnOn] = useState<BtnTitleType>({id: 'Experience', title: 'Experience',icon:'experience'})
+    let [btnOn, setBtnOn] = useState<BtnTitleType>({id: 'Skills', title: 'Skills', icon: 'skills'})
 
     const callbackHandler = (btn: BtnTitleType) => {
-        setBtnOn({id: btn.id, title: btn.title,icon:btn.icon})
+        setBtnOn({id: btn.id, title: btn.title, icon: btn.icon})
     }
 
 
     return (
         <div className={`${styles.scroll} ${styles.background}`}>
-            <TitleH2 title="About me" isOpen={isOpen} setIsOpen={setIsOpen} icon={'about_me'}/>
-            <div className={style.container}>
-                <SvgIcon icon={'portfolio_circle'}/>
-                <h3>PERSONAL INFO</h3>
-                <p>I'm a Freelance Web Designer & Developer based in Moscow, Russia, I have serious passion for UI
-                    effects, animations and creating intuitive, with over a decade of experience.</p>
-            </div>
-            <div>
-                <PersonInfo info={information['info']}/>
-                <PersonInfo info={information['contacts']}/>
-            </div>
-            <div>
-                <SvgIcon icon={'download'}/>
-                <button>Download resume</button>
-            </div>
-            <div>
-                <div>
-                    {btnTitle.map(e => {
-                        return <Button
-                            key={e.id}
-                            id={e.id}
-                            title={e.title}
-                            icon={e.icon}
-                            callback={callbackHandler}
-                        />
-                    })}
+
+            <TitleH2 title="About me" isOpen={isOpen} setIsOpen={setIsOpen} icon={'aboutMe'}/>
+            <div className={styles.container}>
+                <div className={style.container}>
+                    <div className={style.title_person_info}>
+                        <SvgIcon icon={'portfolioCircle'}/>
+                        <h3>PERSONAL INFO</h3>
+                    </div>
+                    <p className={style.description_person}>I'm a Freelance Web Designer & Developer based in Moscow,
+                        Russia, I have serious passion for UI
+                        effects, animations and creating intuitive, with over a decade of experience.</p>
                 </div>
+                <div className={style.list_person}>
+                    <PersonInfo info={information['info']}/>
+                    <PersonInfo info={information['contacts']}/>
+                </div>
+                <button className={style.btn_download}>Download resume <SvgIcon icon={'download'}/></button>
                 <div>
-                    <CardsInfo
-                        key={btnOn.id}
-                        btnTitle={btnOn}
-                        description={description[btnOn.id]}
-                        icon={btnOn.icon}
-                    />
+                    <div className={style.btn_card}>
+                        {btnTitle.map(e => {
+                            return <Button
+                                key={e.id}
+                                id={e.id}
+                                title={e.title}
+                                icon={e.icon}
+                                callback={callbackHandler}
+                            />
+                        })}
+                    </div>
+                    <div>
+                        <CardsInfo
+                            key={btnOn.id}
+                            btnTitle={btnOn}
+                            description={description[btnOn.id]}
+                            icon={btnOn.icon}
+                        />
+                    </div>
                 </div>
             </div>
         </div>

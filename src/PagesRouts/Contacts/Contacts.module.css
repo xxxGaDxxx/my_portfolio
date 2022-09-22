@@ -18,15 +18,14 @@
     margin-bottom: 32px;
     margin-top: 8px;
     align-items: center;
+    color: #7B7B7B;
 }
 
 .contact span {
     margin-left: 10px;
 }
 
-.contacts span {
-    color: #7B7B7B;
-}
+
 
 .contactsForm {
     display: flex;

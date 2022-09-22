@@ -8,12 +8,19 @@ type ContactsType = {
     id: string
     title: string
     value: string
-    icon: string
+    icon: string | Array<string>
 }
 
 type ContactsPropsType = {
     isOpen: boolean
     setIsOpen: Dispatch<SetStateAction<boolean>>
+}
+type SocialHrefType = {
+    id: string
+    href: string
+}
+type SocialPropsType = {
+    [key: string]: SocialHrefType
 }
 
 
@@ -24,23 +31,46 @@ export const Contacts = ({isOpen, setIsOpen}: ContactsPropsType) => {
         {id: '2', title: 'Email', value: 'qwegadqwe@gmail.com', icon: 'email'},
         {id: '3', title: 'Telegram', value: '@wlad_loban', icon: 'telegram'},
         {id: '4', title: 'Address', value: 'Grodno, Beladus', icon: 'address'},
-        {id: '5', title: 'Social Profile', value: `t,li.git`, icon: 'phone'},
+        {id: '5', title: 'Social Profile', value: '', icon: ['telegram2', 'linkedin', 'github']},
     ]
+    const social: SocialPropsType = {
+        ['telegram2']: {id: 'telegram_2', href: 'https://t.me/wlad_loban'},
+        ['linkedin']: {id: 'linkedin', href: 'https://www.linkedin.com/in/wlad-loban-992b34244/'},
+        ['github']: {id: 'github', href: 'https://github.com/xxxGaDxxx'},
+    }
+
 
     return (
 
-        <div className={`${styles.scroll} ${styles.background} ${styles}`}>
-            <TitleH2 title={'Get in toutch'} isOpen={isOpen} setIsOpen={setIsOpen} icon={'get_in_touch'}/>
+        <div className={`${styles.scroll} ${styles.background}`}>
+            <TitleH2 title={'Get in toutch'} isOpen={isOpen} setIsOpen={setIsOpen} icon={'getInTouch'}/>
             <div className={`${style.container} ${styles.container_info}`}>
                 <div className={style.contacts}>
                     {contacts.map((el) => {
-                        return <div key={el.id}>
-                            <h3 className={styles.h3}>{el.title}</h3>
-                            <div className={style.contact}>
-                                <SvgIcon icon={el.icon}/>
-                                <span>{el.value}</span>
+                        if (el.title === 'Social Profile') {
+                            return <div key={el.id}>
+                                <h3 className={styles.h3}>{el.title}</h3>
+                                <div className={style.contact}>
+                                    {Array.isArray(el.icon) && el.icon.map(e => {
+                                        return <a key={e} href={social[e].href}
+                                                  target="_blank">
+                                            <SvgIcon icon={e}/>
+                                        </a>
+                                    })}
+
+                                </div>
                             </div>
-                        </div>
+                        } else {
+
+                            return <div key={el.id}>
+                                <h3 className={styles.h3}>{el.title}</h3>
+                                <div className={style.contact}>
+                                    {typeof el.icon === 'string' && <SvgIcon icon={el.icon}/>}
+                                    <span>{el.value}</span>
+                                </div>
+                            </div>
+                        }
+
                     })}
                 </div>
                 <div className={style.contactsForm}>

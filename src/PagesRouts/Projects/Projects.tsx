@@ -75,7 +75,8 @@ export const Projects = (props: ProjectsPropsType) => {
 
 
     return (
-        isOpen ? <div className={styles.background}>
+        isOpen ? <div className={`${styles.background} ${styles.scroll}`}>
+            <div>
                 <TitleH2 title={'My portfolio'} isOpen={props.isOpen} setIsOpen={props.setIsOpen} icon={'portfolio'}/>
                 <div className={`${style.container} ${styles.container_info} ${style.photo_link}`}>
                     {projects.map((el) => {
@@ -87,6 +88,7 @@ export const Projects = (props: ProjectsPropsType) => {
                         />
                     })}
                 </div>
+            </div>
             </div>
             : <>
                 <Routes>
