@@ -19,6 +19,7 @@ export type ProjectsType = {
     date_end: string
     technologies: string
     photo: string
+    href_Project:string
 }
 
 type ProjectsPropsType = {
@@ -35,7 +36,8 @@ export const Projects = (props: ProjectsPropsType) => {
             date_start: '',
             date_end: '',
             technologies: '',
-            photo:','
+            photo:'',
+            href_Project:'',
         }
     )
 
@@ -51,25 +53,29 @@ export const Projects = (props: ProjectsPropsType) => {
             id: '11', title: 'todolist', date_start: '20/02/2022',
             date_end: '01/08/2022',
             technologies: 'React,Redux,Formik,TS,Material UI,Axios',
-            photo: photo1
+            photo: photo1,
+            href_Project:'https://xxxgadxxx.github.io/Todolist/',
         },
         {
             id: '12', title: 'counter', date_start: '11/01/2022',
             date_end: '01/05/2022',
             technologies: 'React,Redux,Formik,TS',
-            photo:photo2
+            photo:photo2,
+            href_Project:'https://xxxgadxxx.github.io/template/',
         },
         {
             id: '13', title: 'social network', date_start: '20/02/2022',
             date_end: '04/08/2022',
             technologies: 'React,TS,Material UI,Axios',
-            photo:photo3
+            photo:photo3,
+            href_Project:'https://xxxgadxxx.github.io/samurai-way-main/#/profile',
         },
         {
             id: '14', title: 'project', date_start: '20/05/2022',
             date_end: '02/09/2022',
             technologies: 'React,Formik,TS,Axios',
-            photo:photo4
+            photo:photo4,
+            href_Project:'https://www.google.com/',
         },
     ]
 

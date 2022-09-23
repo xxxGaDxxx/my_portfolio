@@ -34,7 +34,7 @@ export const Project = (props: ProjectPropsType) => {
                         </li>
                     </ul>
                     <hr/>
-                    <button className={style.preview}>preview<SvgIcon icon={'preview'}/></button>
+                    <a href={`${props.project.href_Project}`} target="_blank" className={style.preview}>preview<SvgIcon icon={'preview'}/></a>
                 </div>
             </div>
         </div>
