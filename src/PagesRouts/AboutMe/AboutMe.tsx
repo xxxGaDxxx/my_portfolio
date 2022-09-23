@@ -146,7 +146,7 @@ export const AboutMe = ({isOpen, setIsOpen}: AboutMeType) => {
 
             <TitleH2 title="About me" isOpen={isOpen} setIsOpen={setIsOpen} icon={'aboutMe'}/>
             <div className={styles.container}>
-                <div className={style.container}>
+
                     <div className={style.title_person_info}>
                         <SvgIcon icon={'portfolioCircle'}/>
                         <h3>PERSONAL INFO</h3>
@@ -154,7 +154,7 @@ export const AboutMe = ({isOpen, setIsOpen}: AboutMeType) => {
                     <p className={style.description_person}>I'm a Freelance Web Designer & Developer based in Moscow,
                         Russia, I have serious passion for UI
                         effects, animations and creating intuitive, with over a decade of experience.</p>
-                </div>
+
                 <div className={style.list_person}>
                     <PersonInfo info={information['info']}/>
                     <PersonInfo info={information['contacts']}/>

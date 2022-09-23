@@ -28,6 +28,7 @@ export const CardsInfo = (props: CardsInfoType) => {
                                 <h4 className={style.description_exp_edu}>{el.title}</h4>
                                 <div className={style.data_info}><SvgIcon icon={el.icon}/>{el.date}</div>
                                 <p className={style.description_info}>{el.description}</p>
+                              
                             </div>
                         })
                     }

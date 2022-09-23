@@ -74,3 +74,20 @@ height: 40px;
     width: 30%;
 
 }
+
+
+@media screen and (max-width: 767px) {
+    .btn_download {
+        height: 20px;
+        width: 100%;
+    }
+    .description_person {
+        font-size: 14px;
+    }
+
+}
+
+@media screen and (max-width: 576px) {
+
+
+}

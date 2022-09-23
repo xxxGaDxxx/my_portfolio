@@ -17,7 +17,7 @@ export const Button = (props: ButtonType) => {
 
     return (
 
-            <button className={style.btn} onClick={onClick}>{props.title} <SvgIcon icon={props.icon}/></button>
+            <button  className={style.btn} onClick={onClick}>{props.title} <SvgIcon icon={props.icon}/></button>
 
     );
 };

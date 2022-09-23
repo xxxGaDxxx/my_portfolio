@@ -19,17 +19,16 @@ export const TitleH2 = ({title, setIsOpen, icon}: TitleH2Type) => {
         setIsOpen(true)
         navigate('/')
     }
-
     return (
         <div>
-            <div className={style.button}>
-                <button onClick={onClickHandler}>x</button>
-            </div>
+            <span className={style.btnClose} onClick={onClickHandler}>
+            <SvgIcon icon={'closed'}/>
+            </span>
             <h2 className={style.title}>{title}</h2>
             <div className={style.line_icon}>
                 <span className={style.line}/>
                 <span className={style.icon}><SvgIcon icon={icon}/></span>
-                <span  className={style.line}/>
+                <span className={style.line}/>
             </div>
         </div>
     );

@@ -215,7 +215,11 @@ export const SvgIcon = ({icon}: TitleH2SvgIconType) => {
                     fill="white"/>
             </svg>
 
-
+        case 'closed':
+            return <svg width="60" height="60" viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M19.3934 40.6067L40.6066 19.3935" stroke="#7B7B7B" strokeWidth="4" strokeLinecap="round" strokeLinejoin="round"/>
+                <path d="M40.6065 40.6065L19.3933 19.3933" stroke="#7B7B7B" strokeWidth="4" strokeLinecap="round" strokeLinejoin="round"/>
+            </svg>
         default:
             return <svg></svg>
     }

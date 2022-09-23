@@ -4,6 +4,7 @@ import {useNavigate} from 'react-router-dom';
 import styles from '../../../Common/style/styles.module.css'
 import style from './Project.module.css'
 import {SvgIcon} from '../../../Common/svg_icon/SvgIcon';
+import btn from '../../../Common/Title_h2/Title_h2.module.css'
 
 type ProjectPropsType = {
     isOpen: boolean
@@ -22,7 +23,10 @@ export const Project = (props: ProjectPropsType) => {
 
     return (
         <div className={styles.background}>
-            <button className={style.button} onClick={onClick}>x</button>
+            {/*<button className={style.button} onClick={onClick}>x</button>*/}
+            <span className={btn.btnClose} onClick={onClick}>
+            <SvgIcon icon={'closed'}/>
+            </span>
             <div className={style.container_project}>
                 <img className={style.img_project} src={props.project.photo} alt="photo_project"/>
                 <div className={style.bloc_description}>
@@ -34,7 +38,7 @@ export const Project = (props: ProjectPropsType) => {
                         </li>
                     </ul>
                     <hr/>
-                    <a href={`${props.project.href_Project}`} target="_blank" className={style.preview}>preview<SvgIcon icon={'preview'}/></a>
+                    <a  href={`${props.project.href_Project}`} target="_blank" className={style.preview}>preview<SvgIcon icon={'preview'}/></a>
                 </div>
             </div>
         </div>
