@@ -3,13 +3,24 @@
     background-color: #121212;
     color: #C4E300;
     height: 100vh;
+    font-family: 'Lato', serif, Calibri, Arial;
 }
 
 
 .photo {
     margin-top: 24px;
     margin-left: 24px;
-    height: calc(100vh - 48px);
-    width: calc(33.3333333333% - 48px);
+    height: calc(100vh - 49px);
+    width: calc(33.3333333333% - 24px);
     object-fit: cover;
+}
+
+@media screen and (max-width: 769px) {
+    .photo {
+        width:0;
+    }
+
+}
+
+@media screen and (max-width: 576px) {
 }

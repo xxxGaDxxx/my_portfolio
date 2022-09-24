@@ -160,7 +160,9 @@ export const AboutMe = ({isOpen, setIsOpen}: AboutMeType) => {
                     <PersonInfo info={information['contacts']}/>
                 </div>
                 <button className={style.btn_download}>Download resume <SvgIcon icon={'download'}/></button>
+                <span className={style.line}></span>
                 <div>
+
                     <div className={style.btn_card}>
                         {btnTitle.map(e => {
                             return <Button

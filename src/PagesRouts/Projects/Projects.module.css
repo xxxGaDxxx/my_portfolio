@@ -1,10 +1,20 @@
 .container {
     display: flex;
     max-width: 915px;
+    height: 100%;
 }
 
 .photo_link {
     display: grid;
     grid-template-columns: repeat(2,1fr);
     gap: 20px;
+}
+
+@media screen and (max-width: 576px) {
+    .photo_link{
+        display: flex;
+        flex-direction: column;
+        flex-wrap: nowrap;
+        align-items: center;
+    }
 }

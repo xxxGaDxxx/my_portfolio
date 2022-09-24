@@ -9,9 +9,7 @@
     background-color: #121212;
     padding: 35px 35px;
 }
-.contacts h3{
 
-}
 
 .contact {
     display: flex;
@@ -20,6 +18,8 @@
     align-items: center;
     color: #7B7B7B;
 }
+
+
 
 .contact span {
     margin-left: 10px;
@@ -47,7 +47,9 @@
     letter-spacing: 0.02em;
 }
 
+
 .input {
+
     border: none;
     border-bottom: 2px solid #FFFFFF;
     background-color: transparent;
@@ -63,6 +65,7 @@
 
 .input_textarea {
     resize: none;
+
 }
 
 .contactsForm button {
@@ -81,3 +84,28 @@
     text-decoration: none;
 }
 
+@media screen and (max-width: 769px) {
+    .pages_routs {
+        width: 100%;
+        left: 0 !important;
+    }
+
+
+}
+
+@media screen and (max-width: 576px) {
+    .container {
+        display: flex;
+        margin-top: 0;
+        flex-direction: column;
+        margin-bottom: 25px;
+    }
+    .contacts {
+        color: #FFFFFF;
+        margin-right: 0;
+        background-color: #121212;
+        padding: 35px 35px;
+        margin-bottom: 25px;
+    }
+
+}

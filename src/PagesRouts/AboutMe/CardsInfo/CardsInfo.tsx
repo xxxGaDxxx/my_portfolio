@@ -21,10 +21,11 @@ export const CardsInfo = (props: CardsInfoType) => {
                         <SvgIcon icon={props.icon}/>
                         <h3>{props.btnTitle.title}</h3>
                     </div>
+                    <div className={style.bloc_description}>
                     {
                         props.description.map((el: any) => {
                             console.log(1)
-                            return <div key={el.id} >
+                            return <div key={el.id} className={style.bloc_description_line}>
                                 <h4 className={style.description_exp_edu}>{el.title}</h4>
                                 <div className={style.data_info}><SvgIcon icon={el.icon}/>{el.date}</div>
                                 <p className={style.description_info}>{el.description}</p>
@@ -32,6 +33,7 @@ export const CardsInfo = (props: CardsInfoType) => {
                             </div>
                         })
                     }
+                    </div>
                 </div>
             </>
         )

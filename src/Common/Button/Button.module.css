@@ -20,13 +20,14 @@
     transition: background-color 300ms ease, color 300ms ease;
 }
 
-/*.btn:hover {*/
-/*    background-color: #C4E300;*/
-/*    color: #121212;*/
-/*    border: none;*/
-/*}*/
-.btn:focus{
+
+.btn:hover{
     background-color: #C4E300;
     color: #121212;
     border: none;
+}
+
+@media screen and (max-width: 576px) {
+.btn svg{
+    display: none}
 }
