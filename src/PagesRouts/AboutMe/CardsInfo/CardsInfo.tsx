@@ -10,21 +10,21 @@ type CardsInfoType = {
     icon: string
 }
 
-export const CardsInfo = (props: CardsInfoType) => {
-    console.log(props)
+export const CardsInfo = ({btnTitle,description,icon}: CardsInfoType) => {
 
-    if (props.btnTitle.id === 'Experience' || props.btnTitle.id === 'Education') {
+
+    if (btnTitle.id === 'Experience' || btnTitle.id === 'Education') {
         return (
             <>
                 <div className={style.card_info}>
                     <div className={style.title_card_info}>
-                        <SvgIcon icon={props.icon}/>
-                        <h3>{props.btnTitle.title}</h3>
+                        <SvgIcon icon={icon}/>
+                        <h3>{btnTitle.title}</h3>
                     </div>
                     <div className={style.bloc_description}>
                     {
-                        props.description.map((el: any) => {
-                            console.log(1)
+                        description.map((el: any) => {
+
                             return <div key={el.id} className={style.bloc_description_line}>
                                 <h4 className={style.description_exp_edu}>{el.title}</h4>
                                 <div className={style.data_info}><SvgIcon icon={el.icon}/>{el.date}</div>
@@ -42,17 +42,17 @@ export const CardsInfo = (props: CardsInfoType) => {
             <>
                 <div className={style.card_info}>
                     <div className={style.title_card_info}>
-                        <SvgIcon icon={props.icon}/>
+                        <SvgIcon icon={icon}/>
 
-                        <h3>{props.btnTitle.title}</h3>
+                        <h3>{btnTitle.title}</h3>
                     </div>
                     <ul className={style.card_list}>
                         {
-                            props.description.map((el: any) => {
-                                console.log(2)
-                                return <li className={style.card_item} key={el.id}>
+                            description.map((el:any) => {
+                                console.log(el)
+                                return <li className={style.skills_icon}  key={el.id}>
+                                    <SvgIcon icon={el.icon}/>
                                     <h3>{el.title}</h3>
-                                    <p>{el.icons}</p>
                                 </li>
                             })
                         }

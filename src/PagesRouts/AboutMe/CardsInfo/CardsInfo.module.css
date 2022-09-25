@@ -15,6 +15,22 @@
     overflow: initial;
 }
 
+.skills_icon{
+    width: 50%;
+    height: 100%;
+    padding: 10px 20px;
+    background-color: #121212;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    border:1px solid #7B7B7B;
+    color: #FFFFFF;
+}
+.skills_icon h3{
+    margin-top: 10px;
+}
+
 .title_card_info{
     display: flex;
     justify-content: center;

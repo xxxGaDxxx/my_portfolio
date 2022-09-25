@@ -18,7 +18,7 @@ export type BtnTitleType = {
 export type SkillsType = {
     id: string
     title: string
-    icons: string
+icon:string
 }
 export type DescriptionTypeProps = {
     id: string
@@ -59,12 +59,18 @@ export const AboutMe = ({isOpen, setIsOpen}: AboutMeType) => {
 
     let [description] = useState<DescriptionType>({
         ['Skills']: [
-            {id: '10', title: 'Ts', icons: 'icon'},
-            {id: '11', title: 'React', icons: 'icon'},
-            {id: '12', title: 'Redux', icons: 'icon'},
-            {id: '13', title: 'Axios', icons: 'icon'},
-            {id: '14', title: 'Material UI', icons: 'icon'},
-            {id: '15', title: 'Formik', icons: 'icon'},
+            {id: '10', title: 'TS/JS', icon:'ts' },
+            {id: '11', title: 'React', icon:'react' },
+            {id: '12', title: 'Redux', icon:'redux' },
+            {id: '13', title: 'Axios', icon:'axios' },
+            {id: '14', title: 'Formik', icon:'formik' },
+            {id: '15', title: 'Git', icon:'git'},
+            {id: '16', title: 'Material UI', icon:'material' },
+            {id: '17', title: 'Unit-Test', icon:'unit' },
+
+
+
+
 
         ],
         ['Education']: [
