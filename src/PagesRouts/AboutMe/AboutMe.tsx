@@ -126,7 +126,7 @@ export const AboutMe = ({isOpen, setIsOpen}: AboutMeType) => {
 
     let information: InformationType = {
         ['info']: [
-            {id: '21', title: 'First Name:', value: 'Wlad'},
+            {id: '21', title: 'First Name:', value: 'Vlad'},
             {id: '22', title: 'Last Name:', value: 'Loban'},
             {id: '23', title: 'Date of birth:', value: '05.02.1998'},
             {id: '24', title: 'Nationality:', value: 'Belarus'},
