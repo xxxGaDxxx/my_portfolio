@@ -1,6 +1,66 @@
-.img{
-    width:100%;
-    max-width: 100%;
-    object-fit: cover;
+.cardsProjects{
+    position: relative;
+    display: flex;
     cursor: pointer;
+    overflow: hidden;
 }
+.cardsProjects:before{
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    z-index: 2;
+    background-color: rgba(0,0,0,.8);
+    opacity: 0;
+
+    transition: all 0.5s ease;
+}
+.cardsProjects:hover:before{
+    opacity: 1;
+}
+.cardsProjects:hover .img{
+    transform: scale(1.1);
+}
+.img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: all .4s ease;
+}
+.cards_info{
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 15px;
+    overflow: hidden;
+    width: 100%;
+    z-index: 3;
+}
+.cards_info h3{
+    color: #EEEEEE;
+    font-size: 18px;
+    text-transform: uppercase;
+    padding-bottom: 10px;
+}
+.cards_info p{
+    color: #EEEEEE;
+    font-size: 14px;
+    text-align: center;
+}
+.cards_info .title{
+    display: block;
+    transform: translateY(200px);
+    transition: transform .4s ease;
+}
+.title{
+    display: flex;
+    text-align: center;
+}
+.cardsProjects:hover .cards_info .title{
+    transform: translateY(0px);
+}
+
+

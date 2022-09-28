@@ -1,4 +1,4 @@
-import React ,{MouseEvent} from 'react';
+import React from 'react';
 import {ProjectsType} from '../Projects';
 import {useNavigate} from 'react-router-dom';
 import style from './CardsProjects.module.css'
@@ -22,6 +22,15 @@ export const CardsProjects = (props: CardsProjects) => {
     // }
     // onMouseLeave={onFocusHandler}
 
-    return <img  className={style.img} src={props.photo} alt={props.projects.title} onClick={onClick}/>
-
+    return (
+        <div onClick={onClick} className={style.cardsProjects}>
+            <img className={style.img} src={props.photo} alt={props.projects.title}/>
+            <div className={style.cards_info}>
+                <div className={style.title}>
+                    <h3>{props.projects.title}</h3>
+                    <p>{props.projects.technologies}</p>
+                </div>
+            </div>
+        </div>
+    )
 };
