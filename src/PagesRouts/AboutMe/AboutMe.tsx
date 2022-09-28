@@ -6,6 +6,7 @@ import {CardsInfo} from './CardsInfo/CardsInfo';
 import style from './AboutMe.module.css'
 import styles from '../../Common/style/styles.module.css'
 import {SvgIcon} from '../../Common/svg_icon/SvgIcon';
+import photo from '../../images/men/men.jpg';
 
 
 export type BtnTitleType = {
@@ -18,7 +19,7 @@ export type BtnTitleType = {
 export type SkillsType = {
     id: string
     title: string
-icon:string
+    icon: string
 }
 export type DescriptionTypeProps = {
     id: string
@@ -59,63 +60,50 @@ export const AboutMe = ({isOpen, setIsOpen}: AboutMeType) => {
 
     let [description] = useState<DescriptionType>({
         ['Skills']: [
-            {id: '10', title: 'TS/JS', icon:'ts' },
-            {id: '11', title: 'React', icon:'react' },
-            {id: '12', title: 'Redux', icon:'redux' },
-            {id: '13', title: 'Axios', icon:'axios' },
-            {id: '14', title: 'Formik', icon:'formik' },
-            {id: '15', title: 'Git', icon:'git'},
-            {id: '16', title: 'Material UI', icon:'material' },
-            {id: '17', title: 'Unit-Test', icon:'unit' },
-
-
-
+            {id: '10', title: 'TS/JS', icon: 'ts'},
+            {id: '11', title: 'React', icon: 'react'},
+            {id: '12', title: 'Redux', icon: 'redux'},
+            {id: '13', title: 'Axios', icon: 'axios'},
+            {id: '14', title: 'Formik', icon: 'formik'},
+            {id: '15', title: 'Git', icon: 'git'},
+            {id: '16', title: 'Material UI', icon: 'material'},
+            {id: '17', title: 'Unit-Test', icon: 'unit'},
 
 
         ],
         ['Education']: [
             {
                 id: '2.1',
-                title: 'INCUBATOR',
-                date: '2015 - 2018',
-                description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus pretium orci sit amet mi ullamcorper',
+                title: 'IT-INCUBATOR',
+                date: '2022',
+                description: 'Front-end Development, TypeScript, React, Redux, React-Redux, Storybook, Unit Tests, REST API, HTML/CSS/JS',
                 icon: 'startData'
             },
             {
                 id: '2.2',
-                title: 'qwe',
+                title: 'EDUCATIONAL INSTITUTION\n' +
+                    '"GRODNO STATE\n' +
+                    'ELECTROTECHNICAL COLLEGE\n' +
+                    'NAMED AFTER IVAN SCHASTNY"',
                 date: '2011 - 2015',
-                description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus met mi ullamcorper',
+                description: 'Mechanical Technician',
                 icon: 'startData'
             },
-            {
-                id: '2.3',
-                title: 'aaasdasd ',
-                date: '2007 - 2011',
-                description: 'Lorem ipsum dolor sit amet, consectetur ium orci sit amet mi ullamcorper',
-                icon: 'startData'
-            },
+
         ],
         ['Experience']: [
             {
                 id: '1.1',
-                title: 'WEB DESIGNER - ENVATO',
-                date: '2015 - 2018',
-                description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.  pretium orci sit amet mi ullamcorper',
+                title: 'SOCIAL NETWORK',
+                date: '2022',
+                description: 'Stack: JavaScript, TypeScript, CSS, React, Redux,Redux-thunk, Axios, Classnames, Formik, Yup, Reselect, Material UI, Refactoring, bug fixing, deploying, Organizing correct app architecture, Covering code with unit tests.',
                 icon: 'startData'
             },
             {
                 id: '1.2',
-                title: 'WEB DEVELOPER - GOOGLE',
-                date: '2011 - 2015',
-                description: 'Lorem ipsum dolor sit amet, consectetur  elit. Phasellus pretium orci sit amet mi ullamcorper',
-                icon: 'startData'
-            },
-            {
-                id: '1.3',
-                title: 'COMMUNITY MANAGER - ADOBE',
-                date: '2007 - 2011',
-                description: 'Lorem ipsum dolor sit amet, ciscing elit. Phasellus pretium orci sit amet mi ullamcorper',
+                title: 'Todolist',
+                date: '2022',
+                description: 'Stack: JavaScript, TypeScript, CSS, React, Redux,Redux-thunk, Axios, Formik, Material UI, Refactoring, bug fixing, deploying, Covering code with unit tests.',
                 icon: 'startData'
             },
         ],
@@ -152,20 +140,30 @@ export const AboutMe = ({isOpen, setIsOpen}: AboutMeType) => {
 
             <TitleH2 title="About me" isOpen={isOpen} setIsOpen={setIsOpen} icon={'aboutMe'}/>
             <div className={styles.container}>
+                <div className={style.img_personal_info}>
+                    <img className={style.photo_me} src={photo} alt="me"/>
+                    <div className={style.person_info}>
+                        <div className={style.title_person_info}>
+                            <SvgIcon icon={'portfolioCircle'}/>
+                            <h3>PERSONAL INFO</h3>
+                        </div>
+                        <p className={style.description_person}>Front-end React/Redux developer with experience creating
+                            SPAs
+                            using React, Redux, TypeScript/JavaScript, RestAPI, HTML, CSS. I like to develop
+                            applications
+                            that
+                            bring real benefit to the end user. Right now improving my skills in this direction. Ready
+                            for
+                            your
+                            suggestions.</p>
 
-                    <div className={style.title_person_info}>
-                        <SvgIcon icon={'portfolioCircle'}/>
-                        <h3>PERSONAL INFO</h3>
+                        <div className={style.list_person}>
+                            <PersonInfo info={information['info']}/>
+                            <PersonInfo info={information['contacts']}/>
+                        </div>
+                        <button className={style.btn_download}>Download resume <SvgIcon icon={'download'}/></button>
                     </div>
-                    <p className={style.description_person}>I'm a Freelance Web Designer & Developer based in Moscow,
-                        Russia, I have serious passion for UI
-                        effects, animations and creating intuitive, with over a decade of experience.</p>
-
-                <div className={style.list_person}>
-                    <PersonInfo info={information['info']}/>
-                    <PersonInfo info={information['contacts']}/>
                 </div>
-                <button className={style.btn_download}>Download resume <SvgIcon icon={'download'}/></button>
                 <span className={style.line}></span>
                 <div>
 

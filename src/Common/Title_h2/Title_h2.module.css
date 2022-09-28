@@ -37,9 +37,18 @@
     padding: 0 100px;
 }
 
+@media screen and (max-width: 1200px){
+    .line_icon{
+        padding: 0 50px;
+    }
+}
+
 @media screen and (max-width: 769px) {
     .line_icon{
         padding: 0 15px;
+    }
+    .btnClose {
+        right: 50px;
     }
 }
 @media screen and (max-width: 576px) {

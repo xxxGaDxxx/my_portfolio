@@ -1,6 +1,9 @@
 .scroll {
     overflow: auto;
 }
+.container_app{
+    padding: 15px;
+}
 
 /*бг для всех странииц*/
 .background {
@@ -68,7 +71,7 @@
 
 /* контент */
 .container_info {
-    margin: 10px 100px 50px 100px;
+    margin: 10px 100px 10px 100px;
 }
 
 .h3 {
@@ -94,6 +97,19 @@
 
 .icons{
     margin: 0 10px;
+    min-height: 24px;
+    min-width: 24px;
+
+}
+
+@media screen and (max-width: 1200px){
+    .container{
+         padding: 0 50px;
+     }
+    .container_info{
+margin: 10px 50px;
+    }
+
 }
 
 @media screen and (max-width: 769px) {
@@ -105,23 +121,28 @@
         margin: 10px 15px;
     }
     .container{
-        padding: 0 15px;
+        padding: 15px 15px;
+    }
+    .background{
+        margin: 0;
+        height: 100%;
     }
 }
 
 @media screen and (max-width: 576px) {
+
     .background_black {
         display: block;
         margin-right: 0;
         margin-left: 0;
+        margin-top: 0;
+
     }
-    .background{
-        margin-right: 0;
-        margin-left: 0;
-    }
+
     .square {
         width: 100%;
         height: 15%;
         margin-bottom: 20px;
+        line-height: 100%;
     }
 }

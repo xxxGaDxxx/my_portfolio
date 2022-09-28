@@ -9,8 +9,8 @@ const App = () => {
 
     return (
         <div className='App'>
-            <img className={'photo'} src={photo} alt=""/>
-            <div className={`${styles.pages_routs} ${styles.container} `}>
+            <img className={'photo'} src={photo} alt="me"/>
+            <div className={`${styles.pages_routs}  ${styles.container_app}`}>
                 <Pages isOpen={isOpen} setIsOpen={setIsOpen}/>
             </div>
         </div>

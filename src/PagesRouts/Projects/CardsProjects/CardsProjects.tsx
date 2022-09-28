@@ -1,4 +1,4 @@
-import React from 'react';
+import React ,{MouseEvent} from 'react';
 import {ProjectsType} from '../Projects';
 import {useNavigate} from 'react-router-dom';
 import style from './CardsProjects.module.css'
@@ -16,6 +16,12 @@ export const CardsProjects = (props: CardsProjects) => {
         navigate(`project/${props.projects.title}`)
     }
 
-    return <img className={style.img} src={props.photo} alt="photo" onClick={onClick}/>
+    // const onFocusHandler=(e:MouseEvent<HTMLImageElement>)=>{
+    //     console.log(1,e)
+    //
+    // }
+    // onMouseLeave={onFocusHandler}
+
+    return <img  className={style.img} src={props.photo} alt={props.projects.title} onClick={onClick}/>
 
 };

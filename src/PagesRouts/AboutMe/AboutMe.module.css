@@ -1,15 +1,20 @@
 
-
-.container{
+.container {
     /*max-width: 915px;*/
 }
 
-.title_person_info{
+.photo_me {
+    display: none;
+}
+
+
+.title_person_info {
     display: flex;
     align-items: center;
     margin-bottom: 20px;
 }
-.title_person_info h3{
+
+.title_person_info h3 {
     margin-left: 10px;
     font-weight: 700;
     font-size: 18px;
@@ -19,19 +24,22 @@
     text-transform: uppercase;
     color: #FFFFFF;
 }
-.description_person{
+
+.description_person {
     font-size: 16px;
     line-height: 160%;
     letter-spacing: 0.02em;
     color: #7B7B7B;
-margin-bottom: 20px;
+    margin-bottom: 20px;
 }
-.list_person{
+
+.list_person {
     display: flex;
     justify-content: flex-start;
     margin-bottom: 25px;
 }
-.list_person li{
+
+.list_person li {
     display: flex;
     flex-wrap: wrap;
     align-items: center;
@@ -40,17 +48,19 @@ margin-bottom: 20px;
     margin-bottom: 0.7em;
     margin-right: 50px;
 }
-.list_person li span{
+
+.list_person li span {
     color: #FFFFFF;
     margin-right: 5px;
 
 }
-.btn_download{
+
+.btn_download {
     display: flex;
     align-items: center;
     justify-content: center;
 
-   cursor: pointer;
+    cursor: pointer;
 
     margin-bottom: 25px;
     background-color: #C4E300;
@@ -64,34 +74,103 @@ margin-bottom: 20px;
     letter-spacing: 0.02em;
     text-transform: uppercase;
     color: #121212;
-
+    transition: background-color 300ms ease, color 300ms ease;
 }
-.line{
+
+.btn_download:active {
+    background-color: #262626;
+    color: #EEEEEE;
+    border: 1px solid #EEEEEE;
+}
+
+.line {
     display: block;
     height: 1px;
     width: 100%;
     background-color: #7B7B7B;
-    border:1px solid  #7B7B7B;
+    border: 1px solid #7B7B7B;
     margin: 30px 0;
 }
-.btn_card{
+
+.btn_card {
     display: flex;
     justify-content: space-between;
 
 }
-.btn_card button{
-height: 40px;
+
+.btn_card button {
+    height: 40px;
     width: 30%;
+}
+
+@media screen and (max-width: 1200px){
+    .btn_card{
+        flex-direction: column;
+        align-items: center;
+    }
+    .btn_card button{
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 769px) {
+    .photo_me {
+        width: 33.3333333333%;
+        margin-left: auto;
+        left: auto;
+        right: auto;
+
+        max-width: 100%;
+        height: auto;
+        display: inline;
+    }
+
+    .img_personal_info {
+        display: flex;
+        align-items: flex-start;
+        margin-left: auto;
+        margin-right: auto;
+
+    }
+
+    .person_info {
+        width: 66.6666666667%;
+        margin-left: auto;
+        left: auto;
+        right: auto;
+        padding: 0 20px
+    }
+
+    .list_person {
+        justify-content: center;
+        flex-direction: column;
+    }
 
 }
 
-
-@media screen and (max-width: 767px) {
-
-
-}
 
 @media screen and (max-width: 576px) {
+    .img_personal_info {
 
+        align-items: flex-start;
+        flex-direction: column;
+
+    }
+
+    .photo_me {
+        width: 100%;
+        margin-left: auto;
+        left: auto;
+        right: auto;
+        display: block;
+    }
+
+    .person_info {
+        width: 100%;
+        margin-left: auto;
+        left: auto;
+        right: auto;
+        margin-top: 15px;
+    }
 
 }
