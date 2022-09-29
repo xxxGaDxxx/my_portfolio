@@ -42,7 +42,7 @@
     /*border: 1px solid red;*/
 
     font-weight: 700;
-    font-size: 40px;
+    font-size: 35px;
     line-height: 40vh;
     letter-spacing: 0.02em;
     text-transform: uppercase;
@@ -112,7 +112,7 @@ margin: 10px 50px;
 
 }
 
-@media screen and (max-width: 769px) {
+@media screen and (max-width: 910px) {
     .pages_routs {
         width: 100%;
         left: 0 !important;

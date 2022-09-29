@@ -15,7 +15,7 @@
     object-fit: cover;
 }
 
-@media screen and (max-width: 769px) {
+@media screen and (max-width:910px) {
     .photo {
         width:0;
     }
