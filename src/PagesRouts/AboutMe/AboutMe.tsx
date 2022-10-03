@@ -161,7 +161,9 @@ export const AboutMe = ({isOpen, setIsOpen}: AboutMeType) => {
                             <PersonInfo info={information['info']}/>
                             <PersonInfo info={information['contacts']}/>
                         </div>
-                        <button className={style.btn_download}>Download resume <SvgIcon icon={'download'}/></button>
+                        <a className={style.btn_download}
+                           href="https://drive.google.com/file/d/1p2OpHT6nDSf1ffBlMua02xP4ycy7o9uu/view?usp=sharing"
+                           target={'_blank'} download={'CV_Loban'}>Download resume <SvgIcon icon={'download'}/></a>
                     </div>
                 </div>
                 <span className={style.line}></span>

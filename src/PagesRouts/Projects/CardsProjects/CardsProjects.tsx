@@ -16,12 +16,6 @@ export const CardsProjects = (props: CardsProjects) => {
         navigate(`project/${props.projects.title}`)
     }
 
-    // const onFocusHandler=(e:MouseEvent<HTMLImageElement>)=>{
-    //     console.log(1,e)
-    //
-    // }
-    // onMouseLeave={onFocusHandler}
-
     return (
         <div onClick={onClick} className={style.cardsProjects}>
             <img className={style.img} src={props.photo} alt={props.projects.title}/>

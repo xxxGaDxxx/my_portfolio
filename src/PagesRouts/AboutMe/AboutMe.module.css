@@ -75,6 +75,7 @@
     text-transform: uppercase;
     color: #121212;
     transition: background-color 300ms ease, color 300ms ease;
+    text-decoration: none;
 }
 
 .btn_download:active {

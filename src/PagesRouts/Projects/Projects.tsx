@@ -66,7 +66,7 @@ export const Projects = (props: ProjectsPropsType) => {
         {
             id: '13', title: 'social network', date_start: '20/02/2022',
             date_end: '04/08/2022',
-            technologies: ' TypeScript, React, Redux, Redux-thunk, Axios, Classnames, Formik, Yup, Reselect, Material UI, CSS, deploying.',
+            technologies: ' TypeScript, React, Redux, Redux-thunk, Axios, Classnames, Reselect, Material UI, CSS, deploying.',
             photo:photo3,
             href_Project:'https://xxxgadxxx.github.io/samurai-way-main/#/profile',
         },
