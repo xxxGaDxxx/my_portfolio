@@ -22,9 +22,9 @@ export const TitleH2 = ({title, setIsOpen, icon}: TitleH2Type) => {
 
   return (
     <div>
-            <span className={style.btnClose} onClick={onClickHandler}>
-            <SvgIcon icon={'closed'}/>
-            </span>
+      <span className={style.btnClose} onClick={onClickHandler}>
+        <SvgIcon icon={'closed'}/>
+      </span>
       <h2 className={style.title}>{title}</h2>
       <div className={style.line_icon}>
         <span className={style.line}/>

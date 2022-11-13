@@ -4,19 +4,21 @@ import styles from '../../Common/style/styles.module.css'
 import style from './Homepage.module.css'
 
 type HomepageType = {
-    isOpen: boolean
-    setIsOpen: Dispatch<SetStateAction<boolean>>
+  isOpen: boolean
+  setIsOpen: Dispatch<SetStateAction<boolean>>
 }
 
 export const Homepage = ({isOpen, setIsOpen}: HomepageType) => {
-    return (
-        <div className={`${styles.scroll} ${styles.background_black}`}>
-                <div className={style.title_card}>
-                    <span className={style.hi}>Hi There ! I'm</span><span className={style.name}>Vlad Loban</span><span className={style.developer}>Front-end Developer</span>
-                </div>
-            <Header isOpen={isOpen} setIsOpen={setIsOpen}/>
-        </div>
+  return (
+    <div className={`${styles.scroll} ${styles.background_black}`}>
+      <div className={style.title_card}>
+        <span className={style.hi}>Hi There ! I'm</span><span
+        className={style.name}>Vlad Loban</span><span className={style.developer}>Front-end Developer</span>
+      </div>
+
+      <Header isOpen={isOpen} setIsOpen={setIsOpen}/>
+    </div>
 
 
-    );
+  );
 };

@@ -1,12 +1,13 @@
-.card_info{
+.card_info {
     border: 1px solid #7B7B7B;
     margin-bottom: 50px;
 }
+
 .card_list {
     list-style: none;
     display: grid;
-    grid-template-columns: repeat(2,1fr);
-    gap:20px;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
     justify-items: center;
     padding: 25px 0;
 }
@@ -15,7 +16,7 @@
     overflow: initial;
 }
 
-.skills_icon{
+.skills_icon {
     width: 50%;
     height: 100%;
     padding: 10px 20px;
@@ -24,40 +25,42 @@
     flex-direction: column;
     align-items: center;
     text-align: center;
-    border:1px solid #7B7B7B;
+    border: 1px solid #7B7B7B;
     color: #FFFFFF;
 }
-.skills_icon h3{
+
+.skills_icon h3 {
     margin-top: 10px;
 }
 
-.title_card_info{
+.title_card_info {
     display: flex;
     justify-content: center;
     align-items: center;
     background-color: #121212;
 
     height: 70px;
-    border-bottom:1px solid #7B7B7B;
+    border-bottom: 1px solid #7B7B7B;
 }
 
-.bloc_description{
+.bloc_description {
     padding: 25px;
 }
-.bloc_description_line:after{
+
+.bloc_description_line:after {
     content: '';
     display: block;
     height: 1px;
     margin: 25px 0;
     border-bottom: 2px solid #c4e300;
 }
-.bloc_description_line:last-child:after{
+
+.bloc_description_line:last-child:after {
     content: none;
 }
 
 
-
-.description_exp_edu{
+.description_exp_edu {
     font-weight: 700;
     font-size: 18px;
     line-height: 22px;
@@ -65,7 +68,8 @@
     text-transform: uppercase;
     color: #FFFFFF;
 }
-.data_info{
+
+.data_info {
     display: flex;
     align-items: center;
     font-weight: 700;
@@ -75,7 +79,8 @@
     margin-left: -13px;
     padding: 15px 0;
 }
-.description_info{
+
+.description_info {
     font-size: 16px;
     line-height: 160%;
     letter-spacing: 0.02em;
