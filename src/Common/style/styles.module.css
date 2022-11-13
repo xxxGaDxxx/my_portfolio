@@ -1,7 +1,8 @@
 .scroll {
     overflow: auto;
 }
-.container_app{
+
+.container_app {
     padding: 15px;
 }
 
@@ -92,22 +93,22 @@
     left: 33.3333333333% !important;
     padding: 0;
     top: 0;
-
 }
 
-.icons{
+.icons {
     margin: 0 10px;
     min-height: 24px;
     min-width: 24px;
 
 }
 
-@media screen and (max-width: 1200px){
-    .container{
-         padding: 0 50px;
-     }
-    .container_info{
-margin: 10px 50px;
+@media screen and (max-width: 1200px) {
+    .container {
+        padding: 0 50px;
+    }
+
+    .container_info {
+        margin: 10px 50px;
     }
 
 }
@@ -117,13 +118,16 @@ margin: 10px 50px;
         width: 100%;
         left: 0 !important;
     }
-    .container_info{
+
+    .container_info {
         margin: 10px 15px;
     }
-    .container{
+
+    .container {
         padding: 15px 15px;
     }
-    .background{
+
+    .background {
         margin: 0;
         height: 100%;
     }

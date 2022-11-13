@@ -1,39 +1,46 @@
 
-.link:hover .container_title h4 span:first-child{
+.link:hover .container_title h4 span:first-child {
     transform: translateY(-50px);
 }
-.link:hover .container_title h4 span:nth-child(2){
+
+.link:hover .container_title h4 span:nth-child(2) {
     transform: translateY(50px);
 }
-.container_title{
+
+.container_title {
     margin: 0 auto;
     position: relative;
     line-height: 5vh;
 }
-.container_title h4{
+
+.container_title h4 {
     overflow: hidden;
     position: relative;
 }
 
-.container_title h4 span:first-child{
+.container_title h4 span:first-child {
     color: #EEEEEE;
 }
-.container_title h4 span:nth-child(2){
+
+.container_title h4 span:nth-child(2) {
     color: #c4e300;
 }
-.container_title h4 span{
+
+.container_title h4 span {
     display: inline-block;
     position: relative;
     transition: transform 0.5s;
 }
-.container_title h4 span:first-child::before{
+
+.container_title h4 span:first-child::before {
     color: #c4e300;
     transform: translateY(50px);
     position: absolute;
     content: attr(data-hover);
     transition: transform .5s ease;
 }
-.container_title h4 span:nth-child(2)::before{
+
+.container_title h4 span:nth-child(2)::before {
     color: #EEEEEE;
     transform: translateY(-50px);
     position: absolute;

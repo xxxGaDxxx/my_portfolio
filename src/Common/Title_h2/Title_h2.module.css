@@ -24,33 +24,37 @@
     margin: 30px 20px;
 
 }
-.line{
-    width:80%;
+
+.line {
+    width: 80%;
     border: 1px solid #7B7B7B;
     background-color: #7B7B7B;
 
 }
-.line_icon{
+
+.line_icon {
     display: flex;
     align-items: center;
     justify-content: center;
     padding: 0 100px;
 }
 
-@media screen and (max-width: 1200px){
-    .line_icon{
+@media screen and (max-width: 1200px) {
+    .line_icon {
         padding: 0 50px;
     }
 }
 
 @media screen and (max-width: 910px) {
-    .line_icon{
+    .line_icon {
         padding: 0 15px;
     }
+
     .btnClose {
         right: 50px;
     }
 }
+
 @media screen and (max-width: 576px) {
     .title {
         padding-top: 20px;
@@ -61,13 +65,13 @@
         font-weight: 900;
         text-transform: uppercase;
     }
+
     .btnClose {
         position: fixed;
         right: 20px;
         top: 20px;
         cursor: pointer;
     }
-
 
 
 }
