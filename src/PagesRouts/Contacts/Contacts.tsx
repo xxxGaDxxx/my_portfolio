@@ -29,14 +29,14 @@ export const Contacts = ({isOpen, setIsOpen}: ContactsPropsType) => {
 
   const contacts: ContactsType[] = [
     {id: '1', title: 'Phone', value: '+375336211885', icon: 'phone'},
-    {id: '2', title: 'Email', value: 'qwegadqwe@gmail.com', icon: 'email'},
+    {id: '2', title: 'Email', value: 'vlad.loban.dev@gmail.com', icon: 'email'},
     {id: '3', title: 'Telegram', value: '@wlad_loban', icon: 'telegram'},
     {id: '4', title: 'Address', value: 'Grodno, Beladus', icon: 'address'},
     {id: '5', title: 'Social Profile', value: '', icon: ['telegram2', 'linkedin', 'github']},
   ]
   const social: SocialPropsType = {
     ['telegram2']: {id: 'telegram_2', href: 'https://t.me/wlad_loban'},
-    ['linkedin']: {id: 'linkedin', href: 'https://www.linkedin.com/in/wlad-loban-992b34244/'},
+    ['linkedin']: {id: 'linkedin', href: 'https://www.linkedin.com/in/vlad-loban-992b34244/'},
     ['github']: {id: 'github', href: 'https://github.com/xxxGaDxxx'},
   }
 

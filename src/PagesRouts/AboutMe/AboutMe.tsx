@@ -7,7 +7,8 @@ import style from './AboutMe.module.css'
 import styles from '../../Common/style/styles.module.css'
 import {SvgIcon} from '../../Common/svg_icon/SvgIcon';
 import photo from '../../images/men/men.jpg';
-
+// @ts-ignore
+import cv from './cv/CV_A4.pdf'
 
 export const AboutMe = ({isOpen, setIsOpen}: AboutMeType) => {
 
@@ -45,7 +46,7 @@ export const AboutMe = ({isOpen, setIsOpen}: AboutMeType) => {
           '"GRODNO STATE\n' +
           'ELECTROTECHNICAL COLLEGE\n' +
           'NAMED AFTER IVAN SCHASTNY"',
-        date: '2011 - 2015',
+        date: '2013 - 2018',
         description: 'Mechanical Technician',
         icon: 'startData'
       },
@@ -53,6 +54,20 @@ export const AboutMe = ({isOpen, setIsOpen}: AboutMeType) => {
     ],
     ['Experience']: [
       {
+        id: '1.2',
+        title: 'Telegiv',
+        date: '2022',
+        description: 'Разработка SPA приложений на React, Redux Toolkit,\n' +
+          'TypeScript\n' +
+          'Создание проекта с нуля: авторизация, первые страницы,\n' +
+          'админка, роутинг, статистика пользователя.\n' +
+          'Участие в командной работе, рефакторинг и оптимизация\n' +
+          'кода.\n' +
+          'Выполнение поставленных задач.\n' +
+          'Покрытие кода unit-тестами, bugfix, дробление на\n' +
+          'компоненты, вёрстка, мелкие доработки.',
+        icon: 'startData'
+      },{
         id: '1.3',
         title: 'LERNING CARD',
         date: '2022',
@@ -60,14 +75,14 @@ export const AboutMe = ({isOpen, setIsOpen}: AboutMeType) => {
         icon: 'startData'
       },
       {
-        id: '1.2',
+        id: '1.4',
         title: 'Todolist',
         date: '2022',
         description: 'Stack: React / Redux Tolkit/ TypeScript / React-router-dom / Axios / Formik / Material UI / SCSS / Git, Github.',
         icon: 'startData'
       },
       {
-        id: '1.3',
+        id: '1.5',
         title: 'SOCIAL NETWORK',
         date: '2022',
         description: 'Stack: React / Redux / TypeScript / React-router-dom / Axios / React-Hook-Form / Git, Github.',
@@ -99,6 +114,16 @@ export const AboutMe = ({isOpen, setIsOpen}: AboutMeType) => {
     setBtnOn({id: btn.id, title: btn.title, icon: btn.icon})
   }
 
+  const downloadFile = () => {
+
+    const file = document.createElement('a')
+    file.href  = cv
+    file.setAttribute('download',`Cv.pdf`)
+    document.body.append(file)
+    file.click()
+    file.remove()
+  }
+
 
   return (
     <div className={`${styles.scroll} ${styles.background}`}>
@@ -115,21 +140,25 @@ export const AboutMe = ({isOpen, setIsOpen}: AboutMeType) => {
             </div>
 
             <p className={style.description_person}>
-              I am a Front-end developer who is result oriented.
-              I have 1 year experience in building SPA with React(JS/TS), Redux, Redux Toolkit.
-              Would like to find a job in a company with a modern approach to development and a
-              cohesive team.
-              Spend my free time studying NodeJS, solving Codewars tasks or improving my English.
-              Willing to consider project work and full-time work.
+              Front-end developer who is focused
+              result-oriented. Have experience in creating SPAs with React(JS/TS),
+              Redux, Redux Toolkit.
+              <br/>
+              In my free time I read educational literature, solve
+              Codewars or improving my English.
+              <br/>
+              Ready to consider project work and
+              Full-time work. Looking for a job in a company with modern
+              approach to development and well-coordinated team.
             </p>
 
             <div className={style.list_person}>
               <PersonInfo info={information['info']}/>
               <PersonInfo info={information['contacts']}/>
             </div>
-            <a className={style.btn_download}
-               href="https://drive.google.com/uc?export=download&confirm=no_antivirus&id=1AleWVt9Vr0Zz18W-mc8n1XWO1b7XvU7b"
-               download={'Vlad_Loban_CV'}>Download resume <SvgIcon icon={'download'}/></a>
+            <button className={style.btn_download}
+                    onClick={downloadFile}>Download resume <SvgIcon icon={'download'}/>
+            </button>
           </div>
         </div>
 
